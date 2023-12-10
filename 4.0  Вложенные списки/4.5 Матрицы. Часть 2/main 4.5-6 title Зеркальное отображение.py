@@ -6,8 +6,5 @@ matrix = [[int(q) for q in input().split()] for _ in range(n)]
 # for i in range(n):
 # 	print(*matrix[i])
 
-for i in range(n):
-	for j in range(n):
-		matrix[i][i] = matrix[i][n-i-1]
-
-print(matrix)
+for i in range(n - 1, -1 , -1):
+		print(*matrix[i])
