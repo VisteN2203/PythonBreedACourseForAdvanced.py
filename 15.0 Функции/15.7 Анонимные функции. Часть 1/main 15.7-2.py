@@ -20,3 +20,10 @@ data = [['Tokyo', 35676000, 'primary'],
         ['Moscow', 10452000, 'primary'],
         ['Istanbul', 10061000, 'admin'],
         ['Paris', 9904000, 'primary']]
+
+
+filters = list(filter(lambda x: x[1] > 10000000 and x[2] == "primary", data))
+maps = list(map(lambda x: x[0], filters))
+sorteds = sorted(maps)
+reduces = reduce(lambda x, y: x + y + ", ", sorteds,"Cities: ")
+print(reduces[:-2])
